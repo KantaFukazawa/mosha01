@@ -1,0 +1,104 @@
+////////////////////////////////////////
+// MQ
+////////////////////////////////////////
+
+//マップ型変数breakpointsを定義
+$breakpoints: ( //キー　　値
+    'sm': 'screen and (max-width: 576px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 992px)',
+    'xl': 'screen and (max-width: 1200px)'
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+
+    //map-get(マップ型変数, キー)で値を取得
+    @media #{map-get($breakpoints, $breakpoint)} {
+        //この中をカスタムできる
+        @content;
+    }
+}
+
+
+
+
+////////////////////////////////////////
+// COLOR
+////////////////////////////////////////
+
+$main_bg_color: #FFFFFF;
+$price_bg_color: #EEFBFB;
+$main_font_color: #333;
+
+////////////////////////////////////////
+// 共通部分
+////////////////////////////////////////
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 900px;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background: transparent linear-gradient(90deg, #FA41CC 0%, #6020B0 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    width: 155px;
+    height: 37px;
+    border: #fff;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        -webkit-transform: translate(0,2px);
+        -moz-transform: translate(0,2px);
+        transform: translate(0,2px);
+        border-bottom:none;
+        
+        }
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.section_ttl {
+    padding-top: 40px;
+    font: 32px/54px 'Noto Sans JP', sans-serif;
+    letter-spacing: 0px;
+    color: #333333;
+    text-align: center;
+
+
+
+}
+
+.sub_ttl {
+    text-align: center;
+    font: 16px/27px 'Noto Sans JP', sans-serif;
+    letter-spacing: 0px;
+    color: #3BA6C9;
+}

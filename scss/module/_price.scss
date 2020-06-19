@@ -1,0 +1,56 @@
+.price {
+    background-color: #EEFBFB;
+    padding-top: 64px;
+    padding-bottom: 71px;
+
+    &_inner {
+        width: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        .price_item {
+            text-align: center;
+
+            table {
+                width: 80%;
+                height: 410px;
+                margin: 0 auto;
+                margin-top: 73px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px #00000029;
+                opacity: 1;
+
+                tr {
+                    border: 1px solid #00000029;
+
+                    td {
+                        border: 1px solid #00000029;
+                        font: 16px/28px 'Noto Sans JP', sans-serif;
+                        letter-spacing: 0px;
+                        color: #333333;
+
+                        &:nth-child(1) {
+                            width: 278px;
+                            padding: 40px 0;
+                        }
+
+                        &:nth-child(2) {
+                            text-align: left;
+                            padding-left: 31px;
+                        }
+                    }
+                }
+            }
+
+            p {
+                padding-top: 41px;
+                font: 16px/26px 'Noto Sans JP', sans-serif;
+                letter-spacing: 0px;
+                color: #444444;
+            }
+        }
+
+
+    }
+}
